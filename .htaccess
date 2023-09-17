@@ -1,0 +1,10 @@
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+    #RewriteRule ^(.*)$ pislo/public/index.php [L]
+ 
+    RewriteCond %{REQUEST_URI} !^pislo/public
+    RewriteRule ^(.*)$ pislo/public/$1 [L]
+
+    DirectoryIndex pislo/index.php
+    
+</IfModule>
